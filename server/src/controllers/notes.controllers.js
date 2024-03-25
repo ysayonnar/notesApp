@@ -37,11 +37,27 @@ class NotesController{
 
     //здесь айдишник тоже буду передавать в body 
     async updateNote(req,res){
-        res.json({ msg: req.data })
+        //обязательно в документации указать на обязательное наличие каждого из полей
+        try {
+            const { id, title, content, date } = req.body
+            if(!id || !title || !content || !date){
+                return res.status(400).json({msg: 'All parametrs required.'})
+            }
+            const dbRequest = await db.query('UPDATE notes SET title = $1 , content = $2, date = $3 WHERE id = $4', [title, content, date, id])
+            res.json({msg: 'Successfully updated.'})
+        } catch (e) {
+            console.log(e)
+            res.status(400).json({msg: 'Something went wrong.'})
+        }
     }
 
     async deleteNote(req,res){
-        res.json({ msg: req.data })
+        const id = req.body.id
+        if(!id){
+            return res.status(400).json({msg: 'Id required.'})
+        }
+        const dbRequest = await db.query('DELETE FROM notes WHERE id = $1', [id])
+        res.json({ msg: 'Successfully deleted' })
     }
 }
 

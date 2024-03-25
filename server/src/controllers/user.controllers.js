@@ -49,7 +49,7 @@ class UserController{
                 return res.status(400).json({msg: 'Incorrect password!'})
             }
             const token = generateAccessToken(user.rows[0].id, user.rows[0].username)
-            return res.json(token)
+            return res.json({ 'jwt-token': token })
 
         } catch (e) {
             console.log(e)

@@ -29,6 +29,6 @@ const authenticateToken = (req,res,next) =>{
 router.get('/get', authenticateToken, controller.getNotes)
 router.post('/create', authenticateToken, controller.createNote)
 router.put('/update', authenticateToken, controller.updateNote)
-router.delete('/delet', authenticateToken, controller.deleteNote)
+router.delete('/delete', authenticateToken, controller.deleteNote)
 
 module.exports = router

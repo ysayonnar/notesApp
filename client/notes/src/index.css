@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #5995E4, #8E27F7);
+}
+
+header{
+    height: 40px;
+    padding: 5px 30px;
+    background-color: aliceblue;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.home h1{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(24, 24, 24);
+}
+
+.home p{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    color: #e1eeff;
+    margin: 50px auto;
+    width: 700px;
+}
+
+.buttons{
+  width: 500px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.registration{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #5995E4, #8E27F7);
+}
+
+.regForm{
+  width: 500px;
+  height: 280px;
+  background-color: #e1eeff;
+  margin: 30px auto;
+  border-radius: 20px;
+}  

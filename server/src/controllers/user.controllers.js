@@ -17,19 +17,19 @@ class UserController{
         try {
             const errors = validationResult(req)
             if(!errors.isEmpty()){
-                return res.status(400).json({msg: 'Validation error.', errors: errors})
+                return res.status(200).json({msg: 'The username or password is too short.', errors: errors})
             }
             const {username, password} = req.body
             const candidate = await db.query(
                 'SELECT * FROM person WHERE username=$1',
-                [username])
+                [username.toLowerCase()])
             if(candidate.rows.length != 0){
-                return res.status(400).json({msg: `User with name '${username}' already existing.`})
+                return res.status(200).json({msg: `User with name '${username}' already existing.`})
             }
             const hashPassword = bcrypt.hashSync(password, 7)
             const newPerson = await db.query(
 		        'INSERT INTO person (username, password) values ($1, $2) RETURNING *',
-				[username, hashPassword])
+				[username.toLowerCase(), hashPassword])
             res.json({msg: 'User was successfully registered.'})
         } catch (e) {
             console.log(e)

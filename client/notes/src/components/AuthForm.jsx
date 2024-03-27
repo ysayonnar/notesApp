@@ -8,7 +8,6 @@ import axios from 'axios'
 function AuthForm(){
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [validate, setValidate] = useState('')
     const [info, setInfo] = useState('')
     const navigate = useNavigate()
 
@@ -28,7 +27,7 @@ function AuthForm(){
             const response = await axios.post('http://localhost:3000/auth/login', {username, password})
             if(response.data.msg === 'successful auth.'){
                 localStorage.setItem('accessToken', response.data['jwt-token'])
-                navigate('/')//редирект на страницу с заметками
+                navigate('/main')//редирект на страницу с заметками
             }else{
                 setInfo(response.data.msg)
                 setUsername('')

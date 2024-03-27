@@ -89,3 +89,74 @@ header{
   margin: 30px auto;
   border-radius: 20px;
 }
+
+.main{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #5995E4, #8E27F7);
+}
+
+.display{
+  width: 1000px;
+  height: 689px;
+  background-color: #e1eeff;
+  margin: 30px auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.greet{
+  margin: 15px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 28px;
+}
+
+.notes{
+  margin: 10px 30px;
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.note{
+  
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 10px;
+  border-radius: 7px;
+  background-color: #d6d9df;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all ease 0.2s;
+}
+
+.note:hover{
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pagination{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 30px;
+}
+
+.display-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+

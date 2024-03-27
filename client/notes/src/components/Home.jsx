@@ -13,9 +13,13 @@ function Home(){
         navigate('/auth')
     }
 
+	// function getjwt(){
+	// 	console.log(localStorage.getItem('accessToken'))
+	// }
+
     return (
 			<div className='home'>
-				<Header/>
+				<Header />
 				<p className='desc'>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
 					minima unde molestiae officia in cum saepe perferendis quisquam, vitae
@@ -29,6 +33,7 @@ function Home(){
 				<div className='buttons'>
 					<MyButton onClick={redirectRegistration}>Регистрация</MyButton>
 					<MyButton onClick={redirectAuthorization}>Авторизация</MyButton>
+					{/* <MyButton onClick={getjwt}>get jwt</MyButton> */}
 				</div>
 			</div>
 		)

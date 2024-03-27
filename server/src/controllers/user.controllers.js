@@ -40,20 +40,20 @@ class UserController{
     async login(req, res){
         try {
             const {username, password} = req.body
-            const user = await db.query('SELECT * FROM person WHERE username = $1', [username])
+            const user = await db.query('SELECT * FROM person WHERE username = $1', [username.toLowerCase()])
             if(user.rows.length === 0){
-                return res.status(400).json({msg: `User with name '${username}' was not found.`})
+                return res.status(200).json({msg: `User with name '${username}' was not found.`})
             }
             const validPassword = bcrypt.compareSync(password, user.rows[0].password)
             if(!validPassword){
-                return res.status(400).json({msg: 'Incorrect password!'})
+                return res.status(200).json({msg: 'Incorrect password!'})
             }
-            const token = generateAccessToken(user.rows[0].id, user.rows[0].username)
-            return res.json({ 'jwt-token': token })
+            const token = generateAccessToken(user.rows[0].id, user.rows[0].username.toLowerCase())
+            return res.json({msg: 'successful auth.' ,'jwt-token': token })
 
         } catch (e) {
             console.log(e)
-			res.status(400).json({ msg: 'login error' })
+			res.status(200).json({ msg: 'login error' })
         }
     }
 

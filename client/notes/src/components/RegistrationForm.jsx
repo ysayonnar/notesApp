@@ -50,7 +50,7 @@ function RegistrationForm(){
                 <h1 style={{fontFamily: '"Montserrat", sans-serif', fontSize: '24px', textAlign: 'center', padding: '15px', margin: '10px'}}>Registration</h1>
                 <MyInput type="text" placeholder="Name" value={username} onChange={(e) => setUsername(e.target.value)}/>
                 <MyInput type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                <MyButton type="submit" style={{margin: '20px 150px'}}>Register</MyButton>
+                <MyButton type="submit" style={{margin: '20px 150px'}}>Sign up</MyButton>
                 <h1 style={{fontFamily: '"Montserrat", sans-serif', fontSize: '16px', textAlign: 'center', color: success}}>{informator}</h1>
             </form>
         </div>

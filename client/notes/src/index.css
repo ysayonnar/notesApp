@@ -71,3 +71,21 @@ header{
   margin: 30px auto;
   border-radius: 20px;
 }  
+
+
+.auth{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #5995E4, #8E27F7);
+}
+
+.authForm{
+  width: 500px;
+  height: 280px;
+  background-color: #e1eeff;
+  margin: 30px auto;
+  border-radius: 20px;
+}

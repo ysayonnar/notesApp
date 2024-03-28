@@ -48,6 +48,7 @@ function Main(){
 					<div className='display-header'>
 						<h1 className='greet'>Hello, {userInfo.username}</h1>
 						<MyButton
+							onClick={() => navigator('/create')}
 							style={{
 								marginTop: '20px',
 								marginRight: '80px',

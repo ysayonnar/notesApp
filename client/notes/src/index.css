@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
 
 *{
     margin: 0;
@@ -128,17 +129,30 @@ header{
 }
 
 .note{
-  
-  font-family: "Montserrat", sans-serif;
+  font-family: "Edu NSW ACT Foundation", cursive;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: weight;
   font-style: normal;
   width: 150px;
   height: 150px;
-  background-color: red;
+
+  background-color: #fffa6a;
+  color: #262161;
+  opacity: 0.8;
+
+  /* background-color: #a2bad4;
+  color: #373f55; */
+  
+  /* background-color: #c3deb1;
+  color: #121d30; */
+
+  /* background-color: #dcc9dd;
+  color: #413053; */
+
+
+
   margin: 10px;
   border-radius: 7px;
-  background-color: #d6d9df;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   transition: all ease 0.2s;
 }
@@ -151,6 +165,8 @@ header{
   display: flex;
   flex-wrap: wrap;
   margin: 0 30px;
+  position: fixed;
+  top: 700px
 }
 
 .display-header{
@@ -158,5 +174,23 @@ header{
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
+}
+
+.create{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #5995E4, #8E27F7);
+}
+
+.createForm{
+  width: 500px;
+  height: 300px;
+  background-color: #e1eeff;
+  margin: 30px auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 

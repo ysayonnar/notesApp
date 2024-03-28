@@ -12,7 +12,7 @@ function AuthForm(){
     const navigate = useNavigate()
 
     const checkValidation = () => {
-        if(username.length < 4 || password.length < 4){
+        if(username.length < 3 || password.length < 3){
             return false
         }
         else{ 

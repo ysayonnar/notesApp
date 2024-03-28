@@ -136,15 +136,15 @@ header{
   width: 150px;
   height: 150px;
 
-  background-color: #fffa6a;
+  /* background-color: #fffa6a;
   color: #262161;
-  opacity: 0.8;
+  opacity: 0.8; */
 
   /* background-color: #a2bad4;
   color: #373f55; */
   
-  /* background-color: #c3deb1;
-  color: #121d30; */
+  background-color: #c3deb1;
+  color: #121d30;
 
   /* background-color: #dcc9dd;
   color: #413053; */
@@ -192,5 +192,18 @@ header{
   margin: 30px auto;
   margin-bottom: 20px;
   border-radius: 20px;
+}
+
+.trash{
+  width: 30px;
+  height: 30px;
+  
+  transition: all ease 0.2s;
+}
+
+.contacts{
+  display: flex;
+  width: 120px;
+  justify-content: space-around;
 }
 

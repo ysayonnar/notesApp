@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import MyButton from '../UI/MyButton/MyButton'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function Note({info}){
 	const [isHovered, setIsHovered] = useState(false)
+	const [ishoveEdit, setIshovedit] =  useState(false)
+	const navigator = useNavigate()
 
 	const handleDelete = async(e) => {
 		e.preventDefault()
@@ -20,6 +23,10 @@ function Note({info}){
 		} catch (e) {
 			console.log(prev => !prev)
 		}
+	}
+
+	const handleEdit = (id) => {
+		navigator(`/edit/${id}`)
 	}
 
     return (
@@ -59,11 +66,14 @@ function Note({info}){
 						Delete
 					</MyButton>
 					<MyButton
+						onMouseEnter={() => setIshovedit(true)}
+						onMouseLeave={() => setIshovedit(false)}
+						onClick={() => handleEdit(info.id)}
 						style={{
 							width: '50px',
 							height: '25px',
 							fontSize: '13px',
-							backgroundColor: '#95a789',
+							backgroundColor: ishoveEdit ? 'green' : '#95a789',
 						}}
 					>
 						Edit
